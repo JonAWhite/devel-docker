@@ -9,3 +9,5 @@ RUN apt-get update && apt-get install -y --no-install-recommends \
         clang++-3.5 \
         cmake \
         python
+
+RUN apt-get clean
