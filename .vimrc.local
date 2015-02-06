@@ -1,0 +1,24 @@
+"let g:syntastic_cpp_include_dirs = [ 'ref', '/usr/include' ]
+
+
+"nmap <leader>dd ;vert diffsplit src/%<CR><C-W>x
+
+let g:ctrlp_custom_ignore = {
+  \ 'dir':  '\v[\/](bower_components|docs|node_modules)$',
+  \ 'file': '\v\.(exe|so|dll)$',
+  \ 'link': 'some_bad_symbolic_links',
+  \ }
+
+function! g:HeaderguardName()
+  return toupper(expand('%:t:gs/[^0-9a-zA-Z_]/_/g')) . "_"
+endfunction
+
+function! g:HeaderguardLine3()
+  return "#endif // " . g:HeaderguardName() 
+endfunction
+
+" JonAWhite/vim-cpplint
+function! CpplintSetRoot()
+  let g:cpplint_root = expand('%:p:h') " Set to directory of current file
+endfunction
+nnoremap <F8> :call CpplintSetRoot()<CR>

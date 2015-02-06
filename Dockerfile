@@ -11,3 +11,6 @@ RUN apt-get update && apt-get install -y --no-install-recommends \
         python
 
 RUN apt-get clean
+
+ADD .vimrc* /root/
+RUN vim +PluginInstall +qall
