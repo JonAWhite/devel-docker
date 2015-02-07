@@ -7,12 +7,16 @@ RUN apt-get update && apt-get install -y --no-install-recommends \
 	ca-certificates \
         clang-3.5 \
         clang++-3.5 \
+	clang-format-3.5 \
         cmake \
 	curl \
 	git \
+	less \
+	locate \
 	make \
         python \
 	python-dev \
+	silversearcher-ag \
 	vim-nox \
 	wget
 
@@ -26,3 +30,5 @@ RUN mkdir -p /root/.vim/colors && curl -LSso /root/.vim/colors/distinguished.vim
 RUN vim +PluginInstall +qall
 WORKDIR /root/.vim/bundle/YouCompleteMe
 RUN ./install.sh --clang-completer --system-libclang
+WORKDIR /usr/local/bin
+RUN wget https://raw.githubusercontent.com/JonAWhite/cpplint/master/cpplint.py &&  chmod +x cpplint.py
