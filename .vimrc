@@ -252,7 +252,7 @@ set pastetoggle=<F5>
 map <F6> :setlocal spell! spelllang=en_us<CR>
 
 " Cpp-lint
-let g:cpplint_cmd="/home/user/jwhite/local/bin/cpplint.py"
+let g:cpplint_cmd="cpplint.py"
 
 " Clang-Format
 
