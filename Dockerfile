@@ -18,6 +18,7 @@ RUN apt-get update && apt-get install -y --no-install-recommends \
 	python-dev \
 	silversearcher-ag \
 	ssh \
+	tmux \
 	vim-nox \
 	wget
 
