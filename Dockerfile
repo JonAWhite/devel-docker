@@ -4,7 +4,6 @@ MAINTAINER Jonathan White "jonathan.jawhite@gmail.com"
 
 # Update to latest version
 RUN apt-get update && apt-get install -y --no-install-recommends \
-<<<<<<< HEAD
 	ca-certificates \
         clang-3.5 \
         clang++-3.5 \
