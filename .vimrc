@@ -252,12 +252,13 @@ set pastetoggle=<F5>
 map <F6> :setlocal spell! spelllang=en_us<CR>
 
 " Cpp-lint
-let g:cpplint_cmd="/home/user/jwhite/local/bin/cpplint.py"
+let g:cpplint_cmd="cpplint.py"
 
 " Clang-Format
 
-"map <C-I> :pyf llvm-3.5/llvm/tools/clang/tools/clang-format/clang-format.py<CR>
-"imap <C-I> <ESC>:pyf llvm-3.5/llvm/tools/clang/tools/clang-format/clang-format.py<CR>i
+map <C-I> :pyf /usr/share/vim/addons/syntax/clang-format-3.5.py<CR>
+imap <C-I> <ESC>:pyf /usr/share/vim/addons/syntax/clang-format-3.5.py<CR>i
+
 
 " Vim-Easytags
 "let g:easytags_dynamic_files = 2
