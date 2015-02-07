@@ -19,8 +19,8 @@ RUN apt-get update && apt-get install -y --no-install-recommends \
 ADD .vimrc* /root/
 
 RUN apt-get clean
-RUN ln -s /usr/bin/clang-3.5 /usr/bin/clang && ln -s /usr/bin/clang++3.5 /usr/bin/clang++
-RUN mkdir -p /root/.vim/autoload /root/.vim/bundle && curl -LSso /root/.vim/autoload/pathogen.vim https://tpo.pe/pathogen.vim
+RUN ln -s /usr/bin/clang-3.5 /usr/bin/clang && ln -s /usr/bin/clang++-3.5 /usr/bin/clang++
+RUN mkdir -p /root/.vim/autoload /root/.vim/bundle && curl -LSso /root/.vim/autoload/pathogen.vim https://raw.githubusercontent.com/tpope/vim-pathogen/master/autoload/pathogen.vim 
 RUN git clone https://github.com/gmarik/Vundle.vim.git /root/.vim/bundle/Vundle.vim
 RUN mkdir -p /root/.vim/colors && curl -LSso /root/.vim/colors/distinguished.vim https://raw.githubusercontent.com/Lokaltog/vim-distinguished/develop/colors/distinguished.vim
 RUN vim +PluginInstall +qall
